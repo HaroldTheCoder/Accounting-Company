@@ -447,7 +447,9 @@ h2 {
   background-color: #080808;
   padding: 5em;
 }
-
+#schedule-appoiments-map .map-container {
+  width: 50%;
+}
 #schedule-appoiments-map .contact h3 {
   color: #fff;
   font-size: 3em;
@@ -644,10 +646,12 @@ h2 {
   #main-header {
     height: 100vh;
     padding: 5em 5em 5em 2em;
+    background:  url(images/1.png) no-repeat center center;
+    background-size: cover;
   }
 
   #main-header .logo-top {
-    padding-top: 6em;
+    padding-top: 5em;
   }
 
   #main-header .header-title h1 {
@@ -656,7 +660,7 @@ h2 {
   }
 
   #main-header .header-title {
-    padding-top: 2em;
+    padding-top: 1em;
   }   
 
   #main-header .header-title p {
@@ -724,7 +728,7 @@ h2 {
     padding: 7em;
   }
   #services {
-    padding: 5em 0 5em 0;
+    padding: 1em 0 5em 0;
   }
   #services .services-content-left {
     width: 100%;
@@ -819,6 +823,10 @@ h2 {
     padding: 1em;
   }
 
+#schedule-appoiments-map .contact #contact-form #date {
+  min-width:95%;
+}
+
   #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
     display: inline;
   }
@@ -829,6 +837,7 @@ h2 {
   }
   #schedule-appoiments-map .map-container {
     margin: 30% 0 0 0 ;
+    width: 100%;
   }
 
   #main-footer .bottom-links-container {
