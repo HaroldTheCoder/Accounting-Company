@@ -629,7 +629,7 @@ h2 {
 .top-button {
   color: #707070;
   position: fixed;
-  bottom: 1%;
+  bottom: 2%;
   right: 2%;
   font-size: 2em;
   opacity: 0;
@@ -740,6 +740,8 @@ h2 {
   #main-header {
     height: 100vh;
     padding: 5em 5em 5em 2em;
+    background:  url(images/1.png) no-repeat center center;
+    background-size: cover;
   }
 
   #main-header .logo-top {
@@ -941,8 +943,8 @@ h2 {
     text-align: center;
   }
   .top-button {
-    bottom: 5%;
-    right: 3%;
+    bottom: 6%;
+    right: 4%;
     font-size: 1.70em;
   }
 }

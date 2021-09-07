@@ -19,6 +19,9 @@
 html {
 	scroll-behavior: smooth;
 }
+#main-content {
+    background-color: #080808;
+}
 body {
 	font-family: "Source Sans Pro", sans-serif;
 	background-color: $background-color;
@@ -36,6 +39,9 @@ h2 {
 	left: 0;
 	width: 100%;
 	z-index: 1;
+	.nav-button-container {
+    display: none;
+	}
 	.company-name {
 		p {
 			font-size: 1.5em;
@@ -408,7 +414,7 @@ h2 {
 .top-button {
 	color: $secondary-color;
 	position: absolute;
-	bottom: 1%;
+	bottom: 2%;
 	right: 2%;
     font-size: 2em;
 	opacity: 0;
