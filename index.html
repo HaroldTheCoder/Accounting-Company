@@ -15,17 +15,33 @@
 </head>
 <body>
     <nav id="navbar">
+        <div class="nav-button-container">
+            <img src="images/icon-hamburger.svg" class="open-button" alt="">
+        </div>
+
         <div class="company-name">
             <p>Statford Accounting</p>
         </div>
-     <div class="desktop-navbar">
-                <a href="#company-profile" class="nav-link">Company Profile</a>
-                <a href="#client-roster" class="nav-link">Our Client Roster</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact us</a>
-                <a href="#schedule-appoiments-map" class="nav-link">Appoiment</a>
+         <div class="desktop-navbar">
+            <a href="#company-profile" class="nav-link">Company Profile</a>
+            <a href="#client-roster" class="nav-link">Our Client Roster</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact us</a>
+            <a href="#schedule-appoiments-map" class="nav-link">Appoiment</a>
+        </div>
+
+        <div class="mobile-navbar">
+            <div class="company-name-mobile">
+                <p>Statford Accounting</p>
             </div>
-        </nav>
+            <a href="#company-profile" class="mobile-link">Company Profile</a>
+            <a href="#client-roster" class="mobile-link">Our Client Roster</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#contact" class="mobile-link">Contact us</a>
+            <a href="#schedule-appoiments-map" class="mobile-link">Appoiment</a>
+        </div>
+    </nav>
+    <div id="main-content">
     <header id="main-header">
                 <img src="images/Logos/Acemire ALCA (7).png" alt="" width=100px class="logo-top">
             <div class="header-title">
@@ -186,6 +202,7 @@
             <a href="" class="bottom-link">Terms and Conditions</a>
         </div>
     </footer>
+    </div>
     <a href="#" class="top-button" title="Back to top page"><i class="fas fa-chevron-up"></i></a>
     <script src="main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

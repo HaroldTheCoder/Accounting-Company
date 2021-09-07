@@ -14,7 +14,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+#main-content {
+    background-color: #080808;
+}
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #080808;
@@ -53,7 +55,9 @@ h2 {
   font-weight: 900;
   color: #141414;
 }
-
+#navbar .nav-button-container {
+    display: none;
+}
 #navbar .desktop-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +94,9 @@ h2 {
   color: #080808;
 }
 
+#navbar .mobile-navbar {
+    display: none;
+}
 #main-header {
   width: 100%;
   height: 90vh;
@@ -636,13 +643,93 @@ h2 {
 /* Iphone 8 */
 @media screen and (min-width: 321px) and (max-width: 390px) {
   h2 {
-  font-size: 2.50em;
-}
+    font-size: 2.50em;
+  }
+
+  #main-content.active {
+      opacity: 0.2;
+  }
 
   #navbar {
-    display: none;
+    background-color: #08080800;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
   }
-  
+
+  #navbar .company-name {
+      display: none;
+  }
+
+  #navbar .nav-button-container {
+    display: block;
+  }
+
+  #navbar .desktop-navbar {
+      display: none;
+  }
+
+  #navbar .mobile-navbar {
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-color: #fff;
+        width: 80vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+  }
+
+#navbar .mobile-navbar.open {
+    animation: slide-side ease 0.50s;
+    left: 0;
+}
+@keyframes slide-side {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+  #navbar .mobile-navbar .company-name-mobile {
+      font-size: 1.50em;
+      font-weight: 900;
+      padding: 1em 1em 3em 1em;
+  }
+
+  #navbar .mobile-navbar .mobile-link {
+      color: #000;
+      text-decoration: none;
+      padding: 1.50em 1em 1.50em 1em;
+      font-size: 1.20em;
+      border-bottom: 1px solid #d3d3d3;
+      width: 100%;
+  }
+
+  #navbar .mobile-navbar .mobile-link:hover {
+    background-color: #2d2d2d;
+    color: #fff;
+  }
+
   #main-header {
     height: 100vh;
     padding: 5em 5em 5em 2em;

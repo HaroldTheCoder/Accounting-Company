@@ -1,28 +1,13 @@
-// Iphone SE 
-@media screen and (max-width: 320px) {
-    
-}
-
-// Iphone 8
+  
 @media screen and (min-width: 321px) and (max-width: 375px) {
-    #navbar {
-        display: none;
-    }
+  #navbar {
+    display: none;
+  }
 }
 
-// Iphone 12
-@media screen and (min-width: 376px) and (max-width: 390px) {
-    
+@media (min-width: 375px) {
+  #navbar {
+    display: none;
+  }
 }
-$breakpoints: (phone: 340px, 
-               tablet: 768px, 
-               desktop: 1024px) !default;
-
-@include media(">phone", "<tablet") {
-     #navbar {
-        display: none;
-    }
-}
-
-@include media(">tablet", "<950px") {
-}
+/*# sourceMappingURL=media-queries.css.map */

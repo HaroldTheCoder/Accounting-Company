@@ -1,3 +1,32 @@
+// Navbar function
+const mainContent = document.querySelector("#main-content");
+const mobileNavbar = document.querySelector(".mobile-navbar");
+const mobileLink = document.querySelectorAll(".mobile-link");
+const openButton = document.querySelector(".open-button");
+
+openButton.addEventListener("click", function open() {
+    mobileNavbar.classList.toggle('open');
+    mainContent.classList.toggle('active');
+    if (mobileNavbar.classList.contains("open")) {
+		openButton.src = "images/icon-close.svg";
+	} else {
+		openButton.src = "images/icon-hamburger.svg";
+	}
+
+});
+
+mobileLink.forEach((l) => l.addEventListener("click", function close() {
+	mobileNavbar.classList.remove("open");
+    mainContent.classList.remove("active");
+    if (mobileNavbar.classList.contains("open")) {
+	    openButton.src = "images/icon-close.svg";
+    } else {
+	    openButton.src = "images/icon-hamburger.svg";
+    }
+}));
+
+
+
 // NavLink active on section
 const links = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("section");
