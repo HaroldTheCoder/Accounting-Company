@@ -648,6 +648,9 @@ h2 {
 
   #main-content.active {
       opacity: 0.2;
+      position: fixed;
+      top: 0;
+      left: 0;
   }
 
   #navbar {
@@ -658,7 +661,7 @@ h2 {
     align-items: flex-end;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 1em;
+    padding: 1.50em;
     position: absolute;
     top: 0;
     left: 0;
@@ -698,37 +701,37 @@ h2 {
         left: -100%;
   }
 
-#navbar .mobile-navbar.open {
-    animation: slide-side ease 0.50s;
-    left: 0;
-}
-@keyframes slide-side {
-    from {
-        left: -100%;
-    }
-    to {
+    #navbar .mobile-navbar.open {
+        animation: slide-side ease 0.50s;
         left: 0;
     }
-}
-  #navbar .mobile-navbar .company-name-mobile {
-      font-size: 1.50em;
-      font-weight: 900;
-      padding: 1em 1em 3em 1em;
-  }
+    @keyframes slide-side {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+    #navbar .mobile-navbar .company-name-mobile {
+        font-size: 1.50em;
+        font-weight: 900;
+        padding: 1.50em 1em 3em 1em;
+    }
 
-  #navbar .mobile-navbar .mobile-link {
-      color: #000;
-      text-decoration: none;
-      padding: 1.50em 1em 1.50em 1em;
-      font-size: 1.20em;
-      border-bottom: 1px solid #d3d3d3;
-      width: 100%;
-  }
+    #navbar .mobile-navbar .mobile-link {
+        color: #000;
+        text-decoration: none;
+        padding: 1.50em 1em 1.50em 1em;
+        font-size: 1.20em;
+        border-bottom: 1px solid #d3d3d3;
+        width: 100%;
+    }
 
-  #navbar .mobile-navbar .mobile-link:hover {
-    background-color: #2d2d2d;
-    color: #fff;
-  }
+    #navbar .mobile-navbar .mobile-link:hover {
+        background-color: #2d2d2d;
+        color: #fff;
+    }
 
   #main-header {
     height: 100vh;
@@ -738,7 +741,7 @@ h2 {
   }
 
   #main-header .logo-top {
-    padding-top: 5em;
+    padding-top: 5.50em;
   }
 
   #main-header .header-title h1 {
@@ -910,9 +913,9 @@ h2 {
     padding: 1em;
   }
 
-#schedule-appoiments-map .contact #contact-form #date {
-  min-width:95%;
-}
+    #schedule-appoiments-map .contact #contact-form #date {
+        min-width:95%;
+    }
 
   #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
     display: inline;
