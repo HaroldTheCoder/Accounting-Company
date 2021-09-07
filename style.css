@@ -628,16 +628,20 @@ h2 {
 
 .top-button {
   color: #707070;
-  position: absolute;
+  position: fixed;
   bottom: 1%;
-  right: 3%;
+  right: 2%;
   font-size: 2em;
+  opacity: 0;
 }
-
+.top-button.appear {
+  opacity: 1;
+  transition: opacity ease 0.80s;
+}
 .top-button:hover {
   color: #fff;
   -webkit-transition: color ease 0.30s;
-  transition: color ease 0.30s;
+  transition: color ease 0.50s;
 }
 
 /* Iphone 8 */
@@ -736,8 +740,6 @@ h2 {
   #main-header {
     height: 100vh;
     padding: 5em 5em 5em 2em;
-    background:  url(images/1.png) no-repeat center center;
-    background-size: cover;
   }
 
   #main-header .logo-top {
@@ -939,7 +941,8 @@ h2 {
     text-align: center;
   }
   .top-button {
-    right: 8%;
+    right: 2%;
+    font-size: 1.70em;
   }
 }
 /*# sourceMappingURL=style.css.map */
