@@ -107,5 +107,5 @@ function formValidation() {
 
 window.addEventListener('scroll', () => {
     const topButton = document.querySelector(".top-button");
-    topButton.classList.toggle("appear", window.scrollY > 3500);
+    topButton.classList.toggle("appear", window.scrollY > 3000);
 })

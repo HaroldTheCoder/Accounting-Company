@@ -941,7 +941,8 @@ h2 {
     text-align: center;
   }
   .top-button {
-    right: 2%;
+    bottom: 5%;
+    right: 3%;
     font-size: 1.70em;
   }
 }
