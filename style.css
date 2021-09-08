@@ -72,7 +72,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 45%;
+  width: 50%;
 }
 
 #navbar .desktop-navbar .nav-link {
@@ -235,9 +235,20 @@ h2 {
 }
 
 #client-roster .cards-container {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "card-1 card-2 card-3";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  flex-direction: row;
   gap: 7em;
   margin: 7% 0 -15% 0;
 }
@@ -246,12 +257,16 @@ h2 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: card-1;
+  height: 100%;
+  width: 100%;
 }
 
 #client-roster .cards-container .card:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: card-2;
+  height: 100%;
+  width: 100%;
 }
 
 #client-roster .cards-container .card:nth-child(3) {
@@ -259,6 +274,7 @@ h2 {
   -ms-grid-column: 3;
   grid-area: card-3;
   height: 100%;
+  width: 100%;
 }
 
 #client-roster .cards-container .card-img-container {
@@ -456,6 +472,7 @@ h2 {
 }
 #schedule-appoiments-map .map-container {
   width: 50%;
+  padding-top: 2em;
 }
 #schedule-appoiments-map .contact h3 {
   color: #fff;
@@ -644,8 +661,316 @@ h2 {
   transition: color ease 0.50s;
 }
 
-/* Iphone 8 */
-@media screen and (min-width: 321px) and (max-width: 390px) {
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+/* Iphone SE - Extra Small Devices */
+
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  #main-content.active {
+      opacity: 0.2;
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+
+  #navbar {
+    background-color: #08080800;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1.50em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #navbar .company-name {
+      display: none;
+  }
+
+  #navbar .nav-button-container {
+    display: block;
+  }
+
+  #navbar .desktop-navbar {
+      display: none;
+  }
+
+  #navbar .mobile-navbar {
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-color: #fff;
+        width: 80vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+  }
+
+    #navbar .mobile-navbar.open {
+        animation: slide-side ease 0.50s;
+        left: 0;
+    }
+    @keyframes slide-side {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+    #navbar .mobile-navbar .company-name-mobile {
+        font-size: 1.30em;
+        font-weight: 900;
+        padding: 1.50em 1em 2em 1em;
+    }
+
+    #navbar .mobile-navbar .mobile-link {
+        color: #000;
+        text-decoration: none;
+        padding: 1em;
+        font-size: 1.20em;
+        border-bottom: 1px solid #e9e9e9;
+        width: 100%;
+    }
+
+    #navbar .mobile-navbar .mobile-link:hover {
+        background-color: #2d2d2d;
+        color: #fff;
+    }
+
+  #main-header {
+    height: 100vh;
+    padding: 5em 5em 5em 2em;
+    background:  url(images/1.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  #main-header .logo-top {
+    padding-top: 4em;
+  }
+
+  #main-header .header-title h1 {
+    width: 100%;
+    font-size: 2.20em;
+  }
+
+  #main-header .header-title {
+    padding-top: 1em;
+  }   
+
+  #main-header .header-title p {
+    font-size: 1.05em;
+  }
+
+  #company-profile, #services, #contact {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5em 2em 5em 2em;
+  }
+
+  #company-profile {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5em 0 5em 0;
+  }
+  
+  #company-profile .company-profile-paragraph {
+    padding: 5em 2em 0em 2em;
+    width: 100%;
+  }
+
+  #company-profile .company-profile-paragraph p {
+    width: 100%;
+    margin: 5% 0 20% 0;
+    font-size: 1em;
+  }
+
+  #company-profile .company-profile-paragraph .profile-button {
+    font-size: 1.1em;
+  }
+
+  #client-roster {
+    padding: 5em 2em 5em 2em;
+  }
+
+  #client-roster .client-roster-header p {
+    width: 100%;
+    margin: 5% 0 20% 0;
+    font-size: 1em;
+  }
+
+  #client-roster .cards-container {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 5em;
+    margin: 10% 0 -60% 0;
+  }
+
+  #client-roster .cards-container .card-img-container {
+    border-bottom: none;
+  }
+
+  #client-roster .cards-container .card-description {
+    border: 1px solid #b3b3b3;
+  }
+
+  #client-roster .cards-container .card-description h3 {
+    font-size: 1.2em;
+  }
+
+  .overlap-box {
+    padding: 6em;
+  }
+  #services {
+    padding: 1em 0 5em 0;
+  }
+  #services .services-content-left {
+    width: 100%;
+  }
+
+  #services .services-content-left h2 {
+    padding: 1em;
+  }
+
+  #services .services-content-left .services-img-container {
+    width: 100%;
+  }
+
+  #services .services-content-right .services-list {
+    width: 100%;
+    margin: 0 0 0 auto;
+    padding: 0 2em 0 2em;
+  }
+
+  #services .services-content-right .services-list li {
+    padding: 2em 0 2em 0;
+  }
+
+  #services .services-content-right .services-list li:before {
+    font-size: 2.50em;
+    display: block;
+  }
+
+  #services .services-content-right .services-list li:first-child {
+    margin-top: 30%;
+  }
+
+  #services .services-content-right .services-list h3 {
+    display: block;
+    font-size: 1.50em;
+  }
+
+  #services .services-content-right .services-list p {
+    display: block;
+    font-size: 1em;
+    padding: 0.5em 0 0.5em 0.20em;
+  }
+
+  #contact {
+    padding: 5em 0em 5em 0em;
+  }
+
+  #contact .contact-left h2 {
+    padding: 1em;
+  }
+
+  #contact .contact-left .contact-img-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #contact .contact-right {
+    width: 100%;
+    padding: 2em;
+  }
+
+  #contact .contact-right .contact-list {
+    list-style-type: none;
+    width: 100%;
+    margin: 10% 0 0 auto;
+  }
+
+  #contact .contact-right .contact-list li {
+    padding: 1em 0 1em 0;
+  } 
+
+  #contact .contact-right .contact-list li h3 {
+    font-size: 1.30em;
+  }
+
+  #contact .contact-right .contact-list li p {
+    font-size: 1.10em;
+  }
+  #schedule-appoiments-map {
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+    padding: 5em 2em 5em 2em;
+  }
+
+  #schedule-appoiments-map .contact h3 {
+    font-size: 2.50em;
+    padding-bottom: 2em;
+  }
+
+  #schedule-appoiments-map .contact #contact-form input {
+    width: 100%;
+    padding: 1em;
+  }
+
+    #schedule-appoiments-map .contact #contact-form #date {
+        min-width:95%;
+    }
+
+  #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
+    display: inline;
+  }
+
+  #schedule-appoiments-map .contact #contact-form .form-button {
+    padding: 0.5em 2em 0.5em 2em;
+    width: 100%;
+  }
+  #schedule-appoiments-map .map-container {
+    margin: 30% 0 0 0 ;
+    width: 100%;
+  }
+
+  #main-footer .bottom-links-container {
+    padding: 3em 0.50em 1em 0.50em;
+  }
+
+  #main-footer .bottom-links-container .bottom-link {
+    display: block;
+    text-align: center;
+  }
+  .top-button {
+    bottom: 6%;
+    right: 4%;
+    font-size: 1.70em;
+  }
+}
+
+
+/* Iphone 8 - Iphone 12 - Small Devices */
+@media screen and (min-width: 321px) and (max-width: 736px) {
   h2 {
     font-size: 2.50em;
   }
@@ -799,9 +1124,8 @@ h2 {
   }
 
   #client-roster .cards-container {
-    grid-template-areas: "card-1"
-                            "card-2" 
-                              "card-3";
+    -ms-flex-direction: column;
+    flex-direction: column;
     gap: 5em;
     margin: 10% 0 -50% 0;
   }
@@ -946,6 +1270,349 @@ h2 {
     bottom: 6%;
     right: 4%;
     font-size: 1.70em;
+  }
+}
+
+/* Lanscape Iphone */ 
+
+@media screen and (min-width: 737px) and (max-width: 900px) {
+    h2 {
+    font-size: 2.50em;
+  }
+
+  #main-content.active {
+      opacity: 0.2;
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+
+  #navbar {
+    background-color: #08080800;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1.50em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #navbar .company-name {
+      display: none;
+  }
+
+  #navbar .nav-button-container {
+    display: block;
+  }
+
+  #navbar .desktop-navbar {
+      display: none;
+  }
+
+  #navbar .mobile-navbar {
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-color: #fff;
+        width: 80vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+  }
+
+    #navbar .mobile-navbar.open {
+        animation: slide-side ease 0.50s;
+        left: 0;
+    }
+    @keyframes slide-side {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+    #navbar .mobile-navbar .company-name-mobile {
+        font-size: 1.50em;
+        font-weight: 900;
+        padding: 1.50em 1em 3em 1em;
+    }
+
+    #navbar .mobile-navbar .mobile-link {
+        color: #000;
+        text-decoration: none;
+        padding: 1.50em 1em 1.50em 1em;
+        font-size: 1.20em;
+        border-bottom: 1px solid #e9e9e9;
+        width: 100%;
+    }
+
+    #navbar .mobile-navbar .mobile-link:hover {
+        background-color: #2d2d2d;
+        color: #fff;
+    }
+
+  #main-header {
+    height: 100vh;
+    padding: 5em 5em 5em 2em;
+    background:  url(images/1.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  #main-header .logo-top {
+    padding-top: 5.50em;
+  }
+
+  #main-header .header-title h1 {
+    width: 100%;
+    font-size: 2.60em;
+  }
+
+  #main-header .header-title {
+    padding-top: 1em;
+  }   
+
+  #main-header .header-title p {
+    font-size: 1.15em;
+  }
+
+  #company-profile, #services, #contact {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #company-profile {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5em;
+  }
+  
+  #company-profile .company-profile-paragraph {
+    padding: 5em 0em 0em 0em;
+    width: 100%;
+  }
+
+  #company-profile .company-profile-paragraph p {
+    width: 100%;
+    margin: 5% 0 20% 0;
+    font-size: 1.2em;
+  }
+
+  #company-profile .company-profile-paragraph .profile-button {
+    font-size: 1.2em;
+  }
+
+  #client-roster {
+    padding: 5em;
+  }
+
+  #client-roster .client-roster-header p {
+    width: 100%;
+    margin: 5% 0 20% 0;
+    font-size: 1.2em;
+  }
+
+  #client-roster .cards-container {
+    gap: 3em;
+    margin: 10% 0 -25% 0;
+  }
+
+  #client-roster .cards-container .card-img-container {
+    border-bottom: none;
+  }
+
+  #client-roster .cards-container .card-description {
+    border: 1px solid #b3b3b3;
+  }
+
+  #client-roster .cards-container .card-description h3 {
+    font-size: 1.28em;
+  }
+
+  .overlap-box {
+    padding: 7em;
+  }
+  #services {
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5em;
+  height: auto;
+}
+ #services .services-content-left {
+    width: 100%;
+  }
+
+  #services .services-content-left .services-img-container {
+    width: 100%;
+  }
+
+  #services .services-content-right .services-list {
+    width: 100%;
+    margin: 0 0 0 auto;
+    padding: 0 2em 0 2em;
+  }
+  #services .services-content-right {
+    width: 100%;
+  }
+  #services .services-content-right .services-list li {
+    padding: 2em 0 2em 0;
+  }
+
+  #services .services-content-right .services-list li:before {
+    font-size: 2.80em;
+    display: block;
+  }
+
+  #services .services-content-right .services-list li:first-child {
+    margin-top: 50%;
+  }
+
+  #services .services-content-right .services-list h3 {
+    display: block;
+    font-size: 2.10em;
+  }
+
+  #services .services-content-right .services-list p {
+    display: block;
+    font-size: 1.10em;
+    padding: 0.5em 0 0.5em 0.20em;
+  }
+
+  #contact {
+    padding: 5em;
+  }
+
+  #contact .contact-left h2 {
+    padding: 1em;
+  }
+
+  #contact .contact-left .contact-img-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #contact .contact-right {
+    width: 100%;
+    padding: 2em;
+  }
+
+  #contact .contact-right .contact-list {
+    list-style-type: none;
+    width: 100%;
+    margin: 10% 0 0 auto;
+  }
+
+  #contact .contact-right .contact-list li {
+    padding: 1em 0 1em 0;
+  } 
+
+  #contact .contact-right .contact-list li h3 {
+    font-size: 1.5em;
+  }
+
+  #contact .contact-right .contact-list li p {
+    font-size: 1.2em;
+  }
+  #schedule-appoiments-map {
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+    padding: 5em;
+  }
+
+  #schedule-appoiments-map .contact h3 {
+    font-size: 2.50em;
+    padding-bottom: 2em;
+  }
+
+  #schedule-appoiments-map .contact #contact-form input {
+    width: 100%;
+    padding: 1em;
+  }
+
+    #schedule-appoiments-map .contact #contact-form #date {
+        min-width:95%;
+    }
+
+  #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
+    display: inline;
+  }
+
+  #schedule-appoiments-map .contact #contact-form .form-button {
+    padding: 0.5em 2em 0.5em 2em;
+    width: 100%;
+  }
+  #schedule-appoiments-map .map-container {
+    margin: 30% 0 0 0 ;
+    width: 100%;
+  }
+
+  #main-footer .bottom-links-container {
+    padding: 3em 0.50em 1em 0.50em;
+  }
+
+  #main-footer .bottom-links-container .bottom-link {
+    display: block;
+    text-align: center;
+  }
+  .top-button {
+    bottom: 6%;
+    right: 4%;
+    font-size: 1.70em;
+  }
+
+}
+
+/* Ipad - Tablets - Medium Devices */
+@media screen and (min-width: 901px) and (max-width: 1112px) {
+  h2 {
+    font-size: 2.30em;
+  }
+   #navbar .desktop-navbar {
+      width: 60%;
+  }
+   #main-header .header-title h1 {
+    font-size: 3.50em;
+  }
+  #main-header .logo-top {
+    padding-top: 2em;
+  }
+  #main-header .header-title {
+    padding-top: 6em;
+  }   
+   #company-profile .company-profile-paragraph p {
+    width: 100%;
+    font-size: 1.3em;
+  }
+  #client-roster .client-roster-header p {
+    font-size: 1.3em;
+  }
+  #client-roster .cards-container {
+    gap: 5em;
+    margin: 10% 0 -20% 0;
+  }
+  #client-roster .cards-container .card-description h3 {
+    font-size: 1.26em;
+  }
+  #services .services-content-left {
+  padding-bottom: 20em;
+  }
+  #services {
+    padding-top: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
