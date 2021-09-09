@@ -940,10 +940,19 @@ h2 {
         min-width:95%;
     }
 
+  #schedule-appoiments-map .contact #contact-form .checkbox-container {
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
   #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
-    display: inline;
+    display: block;
   }
 
+  #schedule-appoiments-map .contact #contact-form .checkbox-container #afternoon-checkbox,
+  #schedule-appoiments-map .contact #contact-form .checkbox-container #morning-checkbox {
+  margin: 3% 0 3% 0;
+}
   #schedule-appoiments-map .contact #contact-form .form-button {
     padding: 0.5em 2em 0.5em 2em;
     width: 100%;
@@ -1244,15 +1253,25 @@ h2 {
     #schedule-appoiments-map .contact #contact-form #date {
         min-width:95%;
     }
+    #schedule-appoiments-map .contact #contact-form .checkbox-container {
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
   #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
-    display: inline;
+    display: block;
   }
+
+  #schedule-appoiments-map .contact #contact-form .checkbox-container #afternoon-checkbox,
+  #schedule-appoiments-map .contact #contact-form .checkbox-container #morning-checkbox {
+  margin: 3% 0 3% 0;
+}
 
   #schedule-appoiments-map .contact #contact-form .form-button {
     padding: 0.5em 2em 0.5em 2em;
     width: 100%;
   }
+
   #schedule-appoiments-map .map-container {
     margin: 30% 0 0 0 ;
     width: 100%;
@@ -1614,5 +1633,19 @@ h2 {
   #services {
     padding-top: 0;
   }
+
+  #schedule-appoiments-map .contact #contact-form .checkbox-container {
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+  #schedule-appoiments-map .contact #contact-form .checkbox-container .check-button {
+    display: block;
+  }
+
+  #schedule-appoiments-map .contact #contact-form .checkbox-container #afternoon-checkbox,
+  #schedule-appoiments-map .contact #contact-form .checkbox-container #morning-checkbox {
+  margin: 2% 0 2% 0;
+}
 }
 /*# sourceMappingURL=style.css.map */
