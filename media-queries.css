@@ -1,0 +1,12 @@
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  #navbar {
+    display: none;
+  }
+}
+
+@media (min-width: 375px) {
+  #navbar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=media-queries.css.map */

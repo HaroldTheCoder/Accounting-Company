@@ -1,13 +1,28 @@
-  
-@media screen and (min-width: 321px) and (max-width: 375px) {
-  #navbar {
-    display: none;
-  }
+// Iphone SE 
+@media screen and (max-width: 320px) {
+    
 }
 
-@media (min-width: 375px) {
-  #navbar {
-    display: none;
-  }
+// Iphone 8
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    #navbar {
+        display: none;
+    }
 }
-/*# sourceMappingURL=media-queries.css.map */
+
+// Iphone 12
+@media screen and (min-width: 376px) and (max-width: 390px) {
+    
+}
+$breakpoints: (phone: 340px, 
+               tablet: 768px, 
+               desktop: 1024px) !default;
+
+@include media(">phone", "<tablet") {
+     #navbar {
+        display: none;
+    }
+}
+
+@include media(">tablet", "<950px") {
+}
